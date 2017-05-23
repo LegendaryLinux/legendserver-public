@@ -1,10 +1,7 @@
-@font-face{
-    font-family: lato-light;
-    src: url(fonts/Lato-Light.ttf);
-}
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
 
 body{
-    font-family: lato-light, serif;
+    font-family: Lato, serif;
 }
 
 #content-top{
@@ -57,7 +54,7 @@ body{
 }
 
 .social-button{
-    margin:0.75em;
+    margin: 0.75em 0.25em;
 }
 .social-button img{
     width:2em;
@@ -67,10 +64,9 @@ body{
 }
 
 .hr{
-    width: 5%;
+    width: 7.5em;
     background-color:black;
     height:2px;
-    margin-top:1.25%;
     margin-left:auto;
     margin-right:auto;
 }
