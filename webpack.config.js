@@ -1,28 +1,38 @@
-let webpack = require('webpack');
-let path = require('path');
+const path = require('path');
 
-const SRC_DIR = path.resolve(__dirname,'src/js/');
-const DEPLOY_DIR = path.resolve(__dirname,'public/js/');
-
-let config = {
-    entry: SRC_DIR + '/app.js',
-    output: {
-        path: DEPLOY_DIR,
-        filename: 'bundle.js'
+module.exports = {
+    entry: {
+        index: './src/js/index.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js$/,
-                include: SRC_DIR,
-                loader: 'babel-loader'
+                test: /\.(js|jsx|es6)$/,
+                loader: 'babel-loader',
+                query: {
+                    compact: true,
+                    minified: true,
+                }
             },
             {
                 test: /\.css$/,
-                use: ['style-loader','css-loader']
-            }
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                ],
+            },
+            {
+                test: /\.(s[a|c]ss)$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'sass-loader' },
+                ],
+            },
         ]
+    },
+    output: {
+        path: path.resolve(__dirname)+'/public/js',
+        filename: "[name].bundle.js",
     }
 };
-
-module.exports = config;
