@@ -23,7 +23,7 @@ const LegendServer = () => (
             </div>
         </div>
         <div id="other-projects">
-            Stuff I've made: <br />
+            My Projects: <br />
             <a href="https://hamstertransfer.com/">Hamster Transfer</a><br />
             <a href="https://wiki.shorefirerealms.info/">The Shorefire Realms Wiki</a><br />
             <a href="https://github.com/LegendaryLinux/">More on GitHub</a>
