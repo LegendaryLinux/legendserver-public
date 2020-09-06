@@ -9,10 +9,6 @@ module.exports = {
             {
                 test: /\.(js|jsx|es6)$/,
                 loader: 'babel-loader',
-                query: {
-                    compact: true,
-                    minified: true,
-                }
             },
             {
                 test: /\.css$/,
@@ -29,10 +25,24 @@ module.exports = {
                     { loader: 'sass-loader' },
                 ],
             },
+            {
+                test: /\.(png|gif|jpg|jpeg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'static/',
+                            publicPath: 'assets/static/',
+                        },
+                    },
+                ],
+            },
         ]
     },
     output: {
-        path: path.resolve(__dirname)+'/public/js',
+        path: path.resolve(__dirname)+'/public/assets',
+        publicPath: 'assets/',
         filename: "[name].bundle.js",
     }
 };
