@@ -3,7 +3,6 @@ import '../styles/LegendServer.scss';
 
 // Images
 import headshot from '../assets/static/headshot.jpg';
-import twitter from '../assets/static/twitter.png';
 import linkedin from '../assets/static/linkedin.png';
 import github from '../assets/static/github.png';
 
@@ -17,9 +16,6 @@ const LegendServer = () => (
             <div id="social-bar">
                 <div id="handle">LegendaryLinux</div>
                 <div className="hr"/>
-                <a href="https://twitter.com/LegendaryLinux" className="social-button">
-                    <img alt="Twitter Button" src={twitter} className="circle-image"/>
-                </a>
                 <a href="https://www.linkedin.com/in/chris-wilson-12314458" className="social-button">
                     <img alt="LinkedIn Button" src={linkedin} className="circle-image"/>
                 </a>
@@ -30,8 +26,12 @@ const LegendServer = () => (
         </div>
         <div id="other-projects">
             My Projects: <br />
-            <a href="https://github.com/LegendaryLinux/AginahBot">AginahBot</a><br />
-            <a href="https://github.com/LegendaryLinux/MultiWorld-WebClient">MultiWorld-WebClient</a><br />
+            <a href="https://github.com/LegendaryLinux/AginahBot">AginahBot</a>
+            <span className="bullet">•</span>
+            <a href="https://github.com/ArchipelagoMW/">Archipelago</a>
+            <span className="bullet">•</span>
+            <a href="https://github.com/LegendaryLinux/dragon-fractal">Dragon Fractal</a>
+            <span className="bullet">•</span>
             <a href="https://github.com/LegendaryLinux/">More on GitHub</a>
         </div>
     </div>
