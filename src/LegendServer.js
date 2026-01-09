@@ -12,7 +12,11 @@ const LegendServer = () => (
             <img id="headshot" src={headshot} className="circle-image" alt="headshot" />
             <br/>
             <span id="name">HI, I'M CHRIS WILSON,</span><br/>
-            <span id="title">A WEB DEVELOPER</span><br/>
+            <span id="title">
+                FULL-STACK WEB DEVELOPER<br />
+                SOFTWARE ENGINEER
+            </span>
+            <br/>
             <div id="social-bar">
                 <div id="handle">LegendaryLinux</div>
                 <div className="hr"/>
@@ -30,9 +34,9 @@ const LegendServer = () => (
             <span className="bullet">•</span>
             <a href="https://archipelago.gg">Archipelago</a>
             <span className="bullet">•</span>
-            <a href="https://fractal.legendserver.info">Dragon Fractal</a>
-            <span className="bullet">•</span>
             <a href="https://dadjokeslideshow.com/">Dad Joke Slideshow</a>
+            <span className="bullet">•</span>
+            <a href="https://fractal.legendserver.info">Dragon Fractal</a>
             <span className="bullet">•</span>
             <a href="https://github.com/LegendaryLinux/">More on GitHub</a>
         </div>
