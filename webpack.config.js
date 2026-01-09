@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        index: './src/js/index.js'
+        index: './src/index.js'
     },
     module: {
         rules: [
@@ -27,16 +27,10 @@ module.exports = {
             },
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'static/',
-                            publicPath: 'assets/static/',
-                        },
-                    },
-                ],
+                type: 'asset/resource',
+                generator: {
+                    filename: 'static/[name][ext]',
+                },
             },
         ]
     },

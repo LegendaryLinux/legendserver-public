@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/LegendServer.scss';
+import './LegendServer.scss';
 
 // Images
-import headshot from '../assets/static/headshot.jpg';
-import linkedin from '../assets/static/linkedin.png';
-import github from '../assets/static/github.png';
+import headshot from './assets/static/headshot.jpg';
+import linkedin from './assets/static/linkedin.png';
+import github from './assets/static/github.png';
 
 const LegendServer = () => (
     <div id="legend-server">
@@ -28,9 +28,11 @@ const LegendServer = () => (
             My Projects: <br />
             <a href="https://github.com/LegendaryLinux/AginahBot">AginahBot</a>
             <span className="bullet">•</span>
-            <a href="https://github.com/ArchipelagoMW/">Archipelago</a>
+            <a href="https://archipelago.gg">Archipelago</a>
             <span className="bullet">•</span>
-            <a href="https://github.com/LegendaryLinux/dragon-fractal">Dragon Fractal</a>
+            <a href="https://fractal.legendserver.info">Dragon Fractal</a>
+            <span className="bullet">•</span>
+            <a href="https://dadjokeslideshow.com/">Dad Joke Slideshow</a>
             <span className="bullet">•</span>
             <a href="https://github.com/LegendaryLinux/">More on GitHub</a>
         </div>
