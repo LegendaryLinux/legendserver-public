@@ -1,22 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@300;500&display=swap');
+
+body{
+    margin: 0;
+    background:
+        radial-gradient(60em 60em at 10% 10%, rgba(72, 100, 120, 0.25), transparent 60%),
+        radial-gradient(40em 40em at 90% 20%, rgba(120, 90, 60, 0.18), transparent 55%),
+        linear-gradient(160deg, #12171b, #1b2328 55%, #0f1418);
+    color: #1d1a15;
+}
+
+#app{
+    min-height: 100vh;
+}
+
 #legend-server{
-    font-family: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", system-ui, sans-serif;
+    font-family: "Space Grotesk", "Trebuchet MS", Arial, sans-serif;
     font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    box-sizing: border-box;
+
+    #card-shell{
+        width: min(50rem, 100%);
+        background: linear-gradient(135deg, #fbf5e6 0%, #f6ecd7 55%, #f2e6cd 100%);
+        border-radius: 0;
+        padding: 3rem 2.5rem;
+        box-shadow:
+            0 0 0 1px rgba(46, 38, 27, 0.15),
+            0 18px 38px rgba(4, 8, 12, 0.45),
+            0 6px 16px rgba(4, 8, 12, 0.3);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #card-shell::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            repeating-linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0.22),
+                rgba(255, 255, 255, 0.22) 2px,
+                transparent 2px,
+                transparent 9px
+            );
+        opacity: 0.12;
+        pointer-events: none;
+    }
 
     #business-card{
         text-align:center;
-        margin-top:5%;
 
         #headshot{
             width:10em;
             height:10em;
+            box-shadow: 0 10px 30px rgba(35, 29, 18, 0.25);
         }
 
         #name{
-            font-size:2.5em;
+            font-family: "Fraunces", "Times New Roman", serif;
+            font-size:2.4em;
+            letter-spacing: 0.04em;
         }
 
         #title{
-            font-size:1.2em;
+            font-size:1.15em;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         #social-bar{
@@ -25,7 +80,9 @@
             margin-top:1.25%;
 
             #handle{
-                font-size:1.5em;
+                font-size:1.4em;
+                font-weight: 500;
+                letter-spacing: 0.05em;
             }
 
             .social-button{
@@ -34,7 +91,7 @@
 
             .hr{
                 width: 7.5em;
-                background-color:black;
+                background-color: #241f18;
                 height:2px;
                 margin-left:auto;
                 margin-right:auto;
@@ -42,29 +99,60 @@
         }
 
         .circle-image{
-            border: 2px solid black;
+            border: 2px solid #2b241b;
             border-radius:50%;
             width:2em;
             height:2em;
             vertical-align:middle;
             margin-bottom:0.5em;
+            background: #f7f0df;
         }
 
         a{
             text-decoration:none;
+            color: inherit;
         }
     }
 
     #other-projects{
         width: 100%;
-        font-size: 1.25em;
-        margin-top: 4em;
+        font-size: 1.1em;
+        margin-top: 3.5em;
         text-align: center;
-        line-height: 1.5em;
+        line-height: 1.7em;
+    }
+
+    #other-projects a{
+        color: #2b241b;
+        font-weight: 500;
     }
 
     .bullet{
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 700px){
+    #legend-server{
+        padding: 3rem 1.25rem;
+
+        #card-shell{
+            padding: 2.5rem 1.5rem;
+        }
+
+        #business-card{
+            #name{
+                font-size: 2em;
+            }
+
+            #title{
+                font-size: 1.05em;
+            }
+        }
+
+        #other-projects{
+            margin-top: 2.5em;
+        }
     }
 }
